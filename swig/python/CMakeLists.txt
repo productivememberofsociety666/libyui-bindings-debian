@@ -15,7 +15,7 @@ FIND_PACKAGE(PythonInterp)
 EXECUTE_PROCESS(COMMAND ${PYTHON_EXECUTABLE} -s -S -c "import sys,site;sys.stdout.write(site.PREFIXES[0]+'/lib'+('/python'+str(sys.version_info.major)+'.'+str(sys.version_info.minor) if sys.platform.startswith('linux') else ''))" OUTPUT_VARIABLE PYTHON_LIB_DIR)
 
 IF (NOT PYTHON_SITEDIR)
-SET (PYTHON_SITEDIR ${PYTHON_LIB_DIR}/site-packages)
+SET (PYTHON_SITEDIR ${PYTHON_LIB_DIR}/dist-packages)
 ENDIF (NOT PYTHON_SITEDIR)
 
 MESSAGE(STATUS "Python executable: ${PYTHON_EXECUTABLE}")
