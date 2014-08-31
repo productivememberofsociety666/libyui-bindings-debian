@@ -9,6 +9,8 @@ SET( SWIG_INPUT "${CMAKE_CURRENT_SOURCE_DIR}/yui.i" )
 
 
 FIND_PACKAGE(Ruby)
+SET(Python_ADDITIONAL_VERSIONS "3.4")
+SET(PythonLibs_FIND_VERSION "3.4")
 FIND_PACKAGE(PythonLibs)
 
 # doesn't work yet :-(

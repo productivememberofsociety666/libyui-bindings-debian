@@ -10,7 +10,7 @@
 # SWIG_OUPUT is per-target
 SET( SWIG_OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/yui_python.cxx" )
 
-
+SET(PythonInterp_FIND_VERSION "3.4")
 FIND_PACKAGE(PythonInterp)
 EXECUTE_PROCESS(COMMAND ${PYTHON_EXECUTABLE} -c "import sys,site;sys.stdout.write(site.PREFIXES[0]+'/lib'+('/python'+str(sys.version_info.major)+'.'+str(sys.version_info.minor) if sys.platform.startswith('linux') else ''))" OUTPUT_VARIABLE PYTHON_LIB_DIR)
 
